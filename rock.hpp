@@ -9,7 +9,7 @@ typedef struct resposta {
     double sum; 
 } resposta; 
 
-void leEntrada(int A, int S);
+vector<double> leEntrada(int A, int S);
 resposta subArranjoMaximo(vector<double> v, int left, int right);
 resposta subArranjoMaximoMeio(vector<double> v, int left, int mid, int right); 
 

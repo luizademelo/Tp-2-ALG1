@@ -3,21 +3,8 @@
 
 using namespace std; 
 
-void imprimeVetor(vector<double> v)
-{
-    for(int i = 0; i < v.size(); i++)
-        cout << v[i] << " "; 
-    cout << '\n'; 
-}
 
-void imprimeResposta(resposta r)
-{
-    cout << "indice esquerdo: " << r.i_left; 
-    cout << "\nindice direito: " << r.i_right;
-    cout << "\nsoma: " << r.sum << '\n'; 
-}
-
-void leEntrada(int A, int S)
+vector<double> leEntrada(int A, int S)
 {
 
     vector<double> v(S,0);
@@ -31,11 +18,8 @@ void leEntrada(int A, int S)
             v[j] += avaliacao;
         }
     }
-
-    resposta r = subArranjoMaximo(v, 0, v.size()-1); 
-    cout << r.i_left + 1 << " " << r.i_right + 1<< '\n'; 
  
-    return; 
+    return v; 
 }
 
 resposta subArranjoMaximo(vector<double> v, int left, int right)
